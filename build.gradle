@@ -29,7 +29,7 @@ cuba {
     artifact {
         group = 'pbaris.cuba.translationel'
         version = '7.2.4'
-        isSnapshot = false
+        isSnapshot = true
     }
 }
 
@@ -75,6 +75,13 @@ configure(globalModule) {
     entitiesEnhancing {
         main {
             enabled = true
+        }
+    }
+
+    jar {
+        manifest {
+            attributes('App-Component-Id': cuba.artifact.group)
+            attributes('App-Component-Version': cuba.artifact.version + (cuba.artifact.isSnapshot ? '-SNAPSHOT' : ''))
         }
     }
 }
