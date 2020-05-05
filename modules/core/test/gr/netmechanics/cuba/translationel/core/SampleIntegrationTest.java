@@ -1,6 +1,5 @@
-package pbaris.cuba.translationel.core;
+package gr.netmechanics.cuba.translationel.core;
 
-import pbaris.cuba.translationel.CubatranslationelTestContainer;
 import com.haulmont.cuba.core.EntityManager;
 import com.haulmont.cuba.core.Persistence;
 import com.haulmont.cuba.core.Transaction;
@@ -9,7 +8,11 @@ import com.haulmont.cuba.core.global.AppBeans;
 import com.haulmont.cuba.core.global.DataManager;
 import com.haulmont.cuba.core.global.Metadata;
 import com.haulmont.cuba.security.entity.User;
-import org.junit.jupiter.api.*;
+import gr.netmechanics.cuba.translationel.CubatranslationelTestContainer;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.RegisterExtension;
 
 import java.util.List;

@@ -12,6 +12,7 @@ buildscript {
     }
     dependencies {
         classpath "com.haulmont.gradle:cuba-plugin:$cubaVersion"
+        classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.5"
     }
 }
 
@@ -27,9 +28,15 @@ apply(plugin: 'cuba')
 
 cuba {
     artifact {
-        group = 'pbaris.cuba.translationel'
-        version = '7.2.4'
-        isSnapshot = true
+        group = 'gr.netmechanics.cuba.translationel'
+        version = '1.0.0'
+        isSnapshot = false
+    }
+
+    uploadRepository {
+        url = 'http://192.168.3.15:8081/artifactory/netmechanics-local'
+        user = 'admin'
+        password = 'mar@Velias3'
     }
 }
 
@@ -138,7 +145,7 @@ configure(webModule) {
 
     task deployConf(type: Copy) {
         from file('src')
-        include "pbaris/cuba/translationel/**"
+        include "gr/netmechanics/cuba/translationel/**"
         into "$cuba.appHome/${modulePrefix}/conf"
     }
 
@@ -174,3 +181,4 @@ task restart(dependsOn: ['stop', ":${modulePrefix}-core:deploy", ":${modulePrefi
 }
 restart.finalizedBy start
 
+apply from: 'publish.gradle';

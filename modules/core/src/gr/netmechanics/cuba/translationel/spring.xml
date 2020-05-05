@@ -3,6 +3,6 @@
        xmlns:context="http://www.springframework.org/schema/context">
 
     <!-- Annotation-based beans -->
-    <context:component-scan base-package="pbaris.cuba.translationel"/>
+    <context:component-scan base-package="gr.netmechanics.cuba.translationel"/>
 
 </beans>

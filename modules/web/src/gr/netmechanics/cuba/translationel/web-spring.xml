@@ -4,8 +4,8 @@
        xmlns:gui="http://schemas.haulmont.com/cuba/spring/cuba-gui.xsd">
 
     <!-- Annotation-based beans -->
-    <context:component-scan base-package="pbaris.cuba.translationel"/>
+    <context:component-scan base-package="gr.netmechanics.cuba.translationel"/>
     
-    <gui:screens base-packages="pbaris.cuba.translationel.web"/>
+    <gui:screens base-packages="gr.netmechanics.cuba.translationel.web"/>
 
 </beans>

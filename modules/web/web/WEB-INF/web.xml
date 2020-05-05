@@ -8,7 +8,7 @@
     <context-param>
         <param-name>appPropertiesConfig</param-name>
         <param-value>
-            classpath:pbaris/cuba/translationel/web-app.properties
+            classpath:gr/netmechanics/cuba/translationel/web-app.properties
             /WEB-INF/local.app.properties
             "file:${app.home}/local.app.properties"
         </param-value>

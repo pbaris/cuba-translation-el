@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<app-component xmlns="http://schemas.haulmont.com/cuba/app-component.xsd"
+               dependsOn="com.haulmont.cuba">
+
+    <module name="global" blocks="*">
+        <artifact name="translationel-global" appJar="true"/>
+
+        <property name="cuba.persistenceConfig" value="+gr/netmechanics/cuba/translationel/persistence.xml"/>
+        <property name="cuba.metadataConfig" value="+gr/netmechanics/cuba/translationel/metadata.xml"/>
+        <property name="cuba.viewsConfig" value="+gr/netmechanics/cuba/translationel/views.xml"/>
+    </module>
+    <module name="core" dependsOn="global" blocks="core">
+        <artifact name="translationel-core" appJar="true"/>
+
+        <property name="cuba.springContextConfig" value="+gr/netmechanics/cuba/translationel/spring.xml"/>
+        <property name="cuba.mainMessagePack" value="+gr/netmechanics.cuba.translationel.core"/>
+    </module>
+    <module name="web" dependsOn="global" blocks="web">
+        <artifact name="translationel-web" appJar="true"/>
+        <artifact name="translationel-web" classifier="web" ext="zip" configuration="webcontent"/>
+
+        <property name="cuba.springContextConfig" value="+gr/netmechanics/cuba/translationel/web-spring.xml"/>
+        <property name="cuba.dispatcherSpringContextConfig"
+                  value="+gr/netmechanics/cuba/translationel/web-dispatcher-spring.xml"/>
+        <property name="cuba.windowConfig" value="+gr/netmechanics/cuba/translationel/web-screens.xml"/>
+        <property name="cuba.menuConfig" value="+gr/netmechanics/cuba/translationel/web-menu.xml"/>
+        <property name="cuba.permissionConfig" value="+gr/netmechanics/cuba/translationel/web-permissions.xml"/>
+        <property name="cuba.mainMessagePack" value="+gr/netmechanics.cuba.translationel.web"/>
+    </module>
+</app-component>

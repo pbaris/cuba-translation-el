@@ -1,4 +1,4 @@
-package pbaris.cuba.translationel;
+package gr.netmechanics.cuba.translationel;
 
 import com.haulmont.cuba.testsupport.TestContainer;
 import org.junit.jupiter.api.extension.ExtensionContext;
@@ -18,11 +18,11 @@ public class CubatranslationelTestContainer extends TestContainer {
         appPropertiesFiles = Arrays.asList(
                 // List the files defined in your web.xml
                 // in appPropertiesConfig context parameter of the core module
-                "pbaris/cuba/translationel/app.properties",
+                "gr/netmechanics/cuba/translationel/app.properties",
                 // Add this file which is located in CUBA and defines some properties
                 // specifically for test environment. You can replace it with your own
                 // or add another one in the end.
-                "pbaris/cuba/translationel/test-app.properties");
+                "gr/netmechanics/cuba/translationel/test-app.properties");
         autoConfigureDataSource();
     }
 
