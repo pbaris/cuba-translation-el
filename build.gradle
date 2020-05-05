@@ -32,12 +32,6 @@ cuba {
         version = '1.0.0'
         isSnapshot = false
     }
-
-    uploadRepository {
-        url = 'http://192.168.3.15:8081/artifactory/netmechanics-local'
-        user = 'admin'
-        password = 'mar@Velias3'
-    }
 }
 
 dependencies {
