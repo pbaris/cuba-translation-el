@@ -4,7 +4,6 @@
 
 Greek translation of CUBA Platform.
 
-<!--
 ## Installation
 
 **NOTE**: This add-on's repository is officially linked to the main CUBA repository.
@@ -19,4 +18,3 @@ The following table shows which version of the add-on is compatible with which v
 | 7.2.*            | 1.0.0          | gr.netmechanics.cuba.translationel:translationel-global:1.0.0
 
 The latest stable version is: `1.0.0`
--->
