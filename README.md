@@ -4,7 +4,7 @@
 
 Greek translation of CUBA Platform.
 
-<!---
+<!--
 ## Installation
 
 **NOTE**: This add-on's repository is officially linked to the main CUBA repository.
