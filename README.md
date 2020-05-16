@@ -20,7 +20,7 @@ The latest stable version is: `1.0.0`
 You can use **CUBA Studio** / **IntelliJ IDEA** to add it to your project: choose the `CUBA -> Marketplace...` menu item,
 find the *Greek Translation* add-on, then click on the `Install` button.
 
-### Adding the repository
+### Adding the repository manually
 Modify the `build.gradle` of your CUBA application. First add the repository `https://dl.bintray.com/netmechanics/cuba-components` 
 to the buildscript.
 ```gradle
